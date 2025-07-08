@@ -1,0 +1,147 @@
+body {
+    color: #3bd43b;
+    background: black;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+/* crt scanlines */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    z-index: 10;
+    pointer-events: none;
+}
+.crt-text {
+    z-index: 1;
+    position: relative;
+    text-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.7), 
+        0 0 10px rgba(0, 255, 255, 0.6), 
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.4);
+    filter: blur(0.3px);
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.95;
+    }
+}
+body {
+    animation: flicker 0.1s infinite;
+}
+
+div {
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    margin: 20px;
+    padding: 20px;
+}
+
+th {
+    padding: 20px;
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    background-color: #d1d3d1;
+    accent-color: #3bd43b;
+}
+
+input[type="radio"]:checked:after {
+    accent-color: #3bd43b;
+}
+
+input[type="text"] {
+    background-color: black;
+    color: #3bd43b;
+    z-index: 1;
+    position: relative;
+    text-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.7), 
+        0 0 10px rgba(0, 255, 255, 0.6), 
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.4);
+    filter: blur(0.3px);
+}
+input[type="checkbox"] {
+    background-color: #d1d3d1;
+    accent-color: #3bd43b;
+}
+
+select {
+    background-color: black;
+    color: #3bd43b;
+    z-index: 1;
+    position: relative;
+    text-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.7), 
+        0 0 10px rgba(0, 255, 255, 0.6), 
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.4);
+    filter: blur(0.3px);
+}
+
+textarea {
+    background-color: black;
+    color: #3bd43b;
+    z-index: 1;
+    position: relative;
+    text-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.7), 
+        0 0 10px rgba(0, 255, 255, 0.6), 
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.4);
+    filter: blur(0.3px);
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: #3bd43b;
+    z-index: 1;
+    position: relative;
+    text-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.7), 
+        0 0 10px rgba(0, 255, 255, 0.6), 
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.4);
+    filter: blur(0.3px);
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color:blue;
+}
+
+.blinking {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity:0;
+    }
+}

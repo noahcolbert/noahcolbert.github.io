@@ -1,1 +1,69 @@
-<h1> AMONGUS SUS LOL</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Noah Colbert</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="crt-text"> 
+    <div>
+        <p>Non-Descript Linux 1.0.0-aarch64 (ttys000) <br>
+        login: root <br>
+        Password: </p>
+        <p id="currentDate"></p>
+        [root@local ~]# <span class="blinking"> ▯</span>
+    </div>
+    <script>
+        const currentDate = new Date();
+        const formattedDate = currentDate.toDateString();
+        const formattedTime = currentDate.toLocaleTimeString();
+        document.getElementById("currentDate").textContent = `Last login: ${formattedDate} ${formattedTime} on ttys000`;
+    </script>    
+    <h1> cd /Noah_Colbert/</h1>
+    <div>
+        <table>
+            <tr>
+                <th><img src="noah_pic.JPG" alt="Picture of Noah looking swag" style="width:400px;"> </th>
+                <th> <p> Noah Colbert <br> Class of 2025 <br> Computer Science Major </p></th>
+            </tr>
+        </table>
+    </div>
+    
+    <div>
+        <h2> cat About_Me.txt </h2>
+        <p> I'm Noah, I was born in New Jersey but as a military brat, I've lived in many places.
+            Nonetheless I consider Boston my home as I have lived here the longest and opted to stay for uni.<br>
+            I am a senior computer science student. I decided to study CS because I have had a lifelong passion for computers.
+            Fields I'm most interested in include low-level embedded systems programming and anything requiring C.
+        </p>
+    
+    </div>
+    
+    <div>
+        <h2> cat Things_I_Do.txt </h2>
+        <table>
+            <tr>
+                <th><h3>Reading</h3></th>
+                <th><img src="bookshelf_fixed_format.jpg" alt="a picture of my bookshelf" style="width:300px;"></th>
+                <th> <p>Here is a picture of my bookshelf this semester. I read a lot about history and philosophy but
+                    love fiction on occasion. Despite it all, my favourite book is probably The Hobbit.</p>
+                </th>
+            </tr>
+            <tr>
+                <th><h3>Music</h3></th>
+                <th> <img src="speakers.jpeg" alt="a speaker setup" style="width:300px;"></th>
+                <th>This isn't a picture of my setup &#40 I don't actually have a picture of my own setup &#41 but these are the same speakers.
+                    I enjoy spending unholy amounts of money on audio equipment that I end up replacing in a year. I listen to an ecclectic mix
+                    of genres ranging from classical to 80s new wave to goth. </th>
+            </tr>
+            <tr>
+                <th><h3>Beatboxing</h3></th>
+                <th> <img src="bubbx.jpg" alt="BU BBX logo" style="width:300px;"> </th>
+                <th> I'm part of the BU Beatboxing club &#40 despite the fact I'm not good &#41 and even <a href="https://www.instagram.com/bu_beatbox/" target="_blank">run the instagram.
+                </th>
+            </tr>
+        </table>
+    </div>
+    
+    
+</body>
+</html>
