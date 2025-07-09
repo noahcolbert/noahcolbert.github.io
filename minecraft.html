@@ -23,27 +23,47 @@
     </script>  
   </div>
 
-
-  <!-- main page content -->
   <div id="page-content" class="crt-text">
-    <h1>cat home.txt</h1>
+    <h1>cat minecraft.txt</h1>
   </div>
-  
+
+  <div class="crt-text">
+    <p> Information regarding the Minecraft servers can be found here. <br>
+    The servers are whitelisted and private.</p>
+  </div>
   <div>
-    <p class="crt-text"> I'm Noah Colbert. I do many things. </p>
-    <p class="crt-text">
-      This website serves as the attractive front end for the noahcolbert.com domain 
-    through which is hosted a variety of projects. Some personal, some public facing. <br><br></p>
+<section class="server">
+  <h2>Creative server</h2>
+  <div class="server-card">
+    <div class="server-link">
+      <span class="label">Java</span>
+      <a href="mc.noahcolbert.com"><code>mc.noahcolbert.com</code></a>
+    </div>
+    <div class="server-link">
+      <span class="label">Bedrock</span>
+      <a href="mcpe.noahcolbert.com"><code>mcpe.noahcolbert.com</code></a>
+    </div>
+  </div>
+</section>
 
-    <p class="crt-text">But Noah? Why such a basic HTML site???</p>
-    <p class="crt-text">This website is intended to work on most web browsers from within the last 20 years. <br>
-      The point of this is more for my sake than anybody else's as I frequently work with retro/underpowered tech <br>
-      (Was the site theme not clue enough?)
-    </p>
+<section class="server">
+  <h2>Survival server</h2>
+  <div class="server-card">
+    <div class="server-link">
+      <span class="label">Java</span>
+      <a href="survival.noahcolbert.com"><code>survival.noahcolbert.com</code></a>
+    </div>
+    <div class="server-link">
+      <span class="label">Bedrock</span>
+      <a href="survivalpe.noahcolbert.com"><code>survivalpe.noahcolbert.com</code></a>
+    </div>
+  </div>
+</section>
   </div>
 
 
-<script>
+
+  <script>
   fetch('nav.html')
     .then(r => r.text())
     .then(html => {

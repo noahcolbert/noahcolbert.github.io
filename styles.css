@@ -269,3 +269,76 @@ body {
     font-size: 0.9rem;
   }
 }
+
+.server {
+  margin: 2em 0;
+}
+.server h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5em;
+  /* optional: mimic your crt-text style */
+}
+.server-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.server-link {
+  flex: 1 1 150px;       /* grow, shrink, base width */
+  text-align: center;    /* center labels & links */
+}
+.server-link .label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+/* MOBILE: stack links vertically */
+@media (max-width: 600px) {
+  .server-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .server-link {
+    text-align: left;
+  }
+}
+
+/* CARD WRAPPER */
+.server-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid #3bd43b;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+/* INDIVIDUAL BOXES (optional) */
+.server-link {
+  flex: 1 1 120px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px dashed #3bd43b;
+  border-radius: 0.25em;
+  padding: 0.75em;
+}
+
+/* KEEP LABEL & LINK STYLING */
+.server-link .label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+/* RESPONSIVE: STACK ON MOBILE */
+@media (max-width: 600px) {
+  .server-card {
+    flex-direction: column;
+  }
+  .server-link {
+    text-align: left;
+  }
+}
