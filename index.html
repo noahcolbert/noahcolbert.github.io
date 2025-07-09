@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Noah Colbert</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,18 +26,33 @@
 
   <!-- main page content -->
   <div id="page-content" class="crt-text">
-    <h1>cd /Noah_Colbert/</h1>
+    <h1>cat home.txt</h1>
     <!-- etc. -->
+  </div>
+  
+  <div>
+    <p class="crt-text"> I'm Noah Colbert. I do many things. </p>
+    <p class="crt-text">
+      This website serves as the attractive front end for the noahcolbert.com domain 
+    through which is hosted a variety of projects.</p>
   </div>
 
 
-  <script>
-    fetch('nav.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('nav-placeholder').innerHTML = html;
+<script>
+  fetch('nav.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+
+      const navToggle = document.querySelector('.nav-toggle');
+      const navList   = document.querySelector('.navbar ul');
+
+      navToggle.addEventListener('click', () => {
+        navList.classList.toggle('open');
       });
-  </script>
+    })
+    .catch(console.error);
+</script>
 
 </body>
 

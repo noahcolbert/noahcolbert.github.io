@@ -53,6 +53,7 @@ div {
 h1 {
     margin: 10px;
     padding: 10px;
+    font-weight: normal;
 }
 
 th {
@@ -178,6 +179,7 @@ body {
   text-decoration: none;
   font-family: 'Lucida Console', Lucida, monospace;
   font-weight: bold;
+  font-size: larger;
   text-shadow:
         0 0 5px rgba(0, 255, 255, 0.7), 
         0 0 10px rgba(0, 255, 255, 0.6), 
@@ -204,4 +206,66 @@ body {
   margin: 20px;
   padding: 20px;
   white-space: pre-wrap; /* preserve line breaks */
+}
+
+/* hamburger button, hidden on desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #3bd43b;
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  cursor: pointer;
+  z-index: 101;
+}
+
+/* mobile: collapse the menu */
+@media (max-width: 600px) {
+  /* shrink padding & margins for small screens */
+  body {
+    padding-top: 2.5em; /* navbar height on mobile */
+  }
+  .navbar {
+    padding: 0.5em 0;
+  }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .navbar ul.open {
+    display: flex;
+  }
+  .navbar li {
+    margin: 0.5em 0;
+  }
+  .navbar a {
+    font-size: 0.9rem;
+  }
+  /* show the toggle button */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* reduce overall margins on your content divs */
+  div, h1, p {
+    margin: 8px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .crt-text {
+    text-shadow:
+      0 0 3px rgba(0,255,255,0.7),
+      0 0 6px rgba(0,255,255,0.6);
+    font-size: 0.9rem;
+  }
 }
