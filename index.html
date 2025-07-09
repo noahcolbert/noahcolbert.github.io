@@ -1,26 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> Noah Colbert</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Noah Colbert</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="crt-text"> 
+<body>
+  <!-- placeholder for the navbar -->
+  <div id="nav-placeholder"></div>
+
+  <!-- content -->
+  <main class="crt-text">
     <div>
-        <p>Non-Descript Linux 1.0.0-aarch64 (ttys000) <br>
-        login: root <br>
-        Password: </p>
-        <p id="currentDate"></p>
-        [root@local ~]# <span class="blinking"> ▯</span>
+      <p>
+        Non-Descript Linux 1.0.0-aarch64 (ttys000)<br>
+        login: root<br>
+        Password:
+      </p>
+      <p id="currentDate"></p>
+      [root@local ~]# <span class="blinking">▯</span>
     </div>
     <script>
-        const currentDate = new Date();
-        const formattedDate = currentDate.toDateString();
-        const formattedTime = currentDate.toLocaleTimeString();
-        document.getElementById("currentDate").textContent = `Last login: ${formattedDate} ${formattedTime} on ttys000`;
-    </script>    
-    <h1> cd /Noah_Colbert/</h1>
+      const now = new Date();
+      document.getElementById("currentDate").textContent =
+        `Last login: ${now.toDateString()} ${now.toLocaleTimeString()} on ttys000`;
+    </script>
 
-    
-    
+    <h1>cd /Noah_Colbert/</h1>
+    <!-- …rest of page… -->
+  </main>
+
+  <!-- loader script -->
+  <script>
+    fetch('nav.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+      });
+  </script>
 </body>
 </html>
