@@ -6,21 +6,38 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!--Insert the Navbar-->
   <div id="nav-placeholder"></div>
-
-  <!-- TERMINAL ANIMATION CONTAINER -->
-  <div id="terminal" class="crt-text">
-    <!-- lines will be injected here by JavaScript -->
+  <!--Terminal type header-->
+  <div class="crt-text">
+    <a>Non-Descript Unix 1.0.0-aarch64 (ttys000)</a>
+    <p id="currentDate"></p>
+        [root@local ~]# <span class="blinking"> ▯</span>
+    </div>
+    <script>
+        const currentDate = new Date();
+        const formattedDate = currentDate.toDateString();
+        const formattedTime = currentDate.toLocaleTimeString();
+        document.getElementById("currentDate").textContent = `Last login: ${formattedDate} ${formattedTime} on ttys000`;
+    </script>  
   </div>
 
-  <!-- YOUR REAL PAGE CONTENT -->
-  <div id="page-content" class="hidden">
-    <!-- …everything that should appear after the “cd /Noah_Colbert/”… -->
-    <h1>THE AMONGUS HEADER</h1>
+
+  <!-- main page content -->
+  <div id="page-content" class="crt-text">
+    <h1>cd /Noah_Colbert/</h1>
     <!-- etc. -->
   </div>
 
-  <script src="typing.js"></script>
+
+  <script>
+    fetch('nav.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+      });
+  </script>
+
 </body>
 
 </html>
