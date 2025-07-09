@@ -157,7 +157,7 @@ body {
   top: 0; left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  border-bottom: 1px solid #3bd43b;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.5);
   z-index: 100;
   text-align: center;
   padding: 0.5em 0;
@@ -178,9 +178,10 @@ body {
   text-decoration: none;
   font-weight: bold;
   text-shadow:
-    0 0 5px rgba(0,255,0,0.7),
-    0 0 10px rgba(0,255,0,0.6),
-    0 0 20px rgba(0,255,0,0.5);
+        0 0 5px rgba(0, 255, 255, 0.7), 
+        0 0 10px rgba(0, 255, 255, 0.6), 
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.4);
   filter: blur(0.3px);
   transition: text-shadow 0.2s, color 0.2s;
 }
@@ -190,4 +191,16 @@ body {
   text-shadow:
     0 0 10px rgba(0,255,0,0.9),
     0 0 20px rgba(0,255,0,0.8);
+}
+
+/* Hide until animation is done */
+.hidden {
+  visibility: hidden;
+}
+
+/* Make sure #terminal uses same padding/margins you want */
+#terminal {
+  margin: 20px;
+  padding: 20px;
+  white-space: pre-wrap; /* preserve line breaks */
 }

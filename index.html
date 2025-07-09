@@ -6,37 +6,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- placeholder for the navbar -->
   <div id="nav-placeholder"></div>
 
-  <!-- content -->
-  <main class="crt-text">
-    <div>
-      <p>
-        Non-Descript Linux 1.0.0-aarch64 (ttys000)<br>
-        login: root<br>
-        Password:
-      </p>
-      <p id="currentDate"></p>
-      [root@local ~]# <span class="blinking">▯</span>
-    </div>
-    <script>
-      const now = new Date();
-      document.getElementById("currentDate").textContent =
-        `Last login: ${now.toDateString()} ${now.toLocaleTimeString()} on ttys000`;
-    </script>
+  <!-- TERMINAL ANIMATION CONTAINER -->
+  <div id="terminal" class="crt-text">
+    <!-- lines will be injected here by JavaScript -->
+  </div>
 
-    <h1>cd /Noah_Colbert/</h1>
-    <!-- …rest of page… -->
-  </main>
+  <!-- YOUR REAL PAGE CONTENT -->
+  <div id="page-content" class="hidden">
+    <!-- …everything that should appear after the “cd /Noah_Colbert/”… -->
+    <h1>Welcome to Noah’s Projects</h1>
+    <!-- etc. -->
+  </div>
 
-  <!-- loader script -->
-  <script>
-    fetch('nav.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('nav-placeholder').innerHTML = html;
-      });
-  </script>
+  <script src="typing.js"></script>
 </body>
+
 </html>
